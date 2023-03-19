@@ -1,0 +1,16 @@
+.card-header{
+    background-color: white;
+    border: none;
+}
+
+.bordered{
+    border: 1px dashed block;
+    background-color: #eee;
+}
+
+.myColor{
+    color:blue;
+}
+
+.colorFun1{ color:blue; }
+.colorFun2{ color:green; }

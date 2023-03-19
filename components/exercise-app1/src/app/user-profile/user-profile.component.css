@@ -1,0 +1,12 @@
+.card-style{
+    display: inline-block;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.profile-image{
+    height: 400px;
+    width: 300px;
+}

@@ -1,0 +1,18 @@
+.container-styles {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  border: solid 1px red;
+}
+
+button {
+  border: solid yellow;
+  background-color: white;
+  color: yellow;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: yellow;
+  color: black;
+}

@@ -1,0 +1,11 @@
+<div class="container-fluid container-styles">
+    <div class = "row text-center">
+        <h2 style = "color: yellow;">May I help you?</h2>
+        <h3>When was I Born? </h3>
+    </div>
+    <div class="row">
+        <input type = "number" style="width: 100%;" [(ngModel)] = "age"/>
+        <button type = "submit" class="btn btn-warning" (click) = "showText()">Show Birth Year</button>
+        <h4 class="text-center" style="color:yellow">{{belowText}}</h4>
+    </div>
+</div>

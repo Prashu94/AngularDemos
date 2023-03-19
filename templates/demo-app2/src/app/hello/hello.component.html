@@ -1,0 +1,10 @@
+<div class="customStyle">
+    <h1>Welcome</h1>
+    <h2>Course Name: {{courseName}}</h2>
+    <br/>
+    <button (click)="changeName()">Change Course Name</button>
+    <br/>
+    <input #cName placeholder="Change course name with this input"/>
+    <br/>
+    <button (click)="changeNameWithThis(cName.value)">Change Course Name</button>
+</div>>

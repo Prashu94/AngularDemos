@@ -1,0 +1,135 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <!-- If loginSuccess = true and loginFailed = true-->
+      <div
+        class="card shadow"
+        *ngIf="!loginSuccess && !loginFailed; else messages"
+      >
+        <div class="card-header text-center">
+          <h3 style="font-family: cursive">Login</h3>
+        </div>
+
+        <form class="ml-4 mr-4 mb-4">
+          <!-- ml - margin-left, mr - margin-right, mb - margin-bottom -->
+
+          <div class="form-group">
+            <label for="userName">User Name: </label>
+            <input
+              class="form-control"
+              type="text"
+              name="userName"
+              [(ngModel)]="userName"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password: </label>
+            <input
+              class="form-control"
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-outline-success"
+            (click)="login()"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+
+      <!-- *ngIf Directive Way of handling else condition -->
+      <!-- If loginFailed = true -->
+      <!-- <div *ngIf="loginFailed" class="text-center">
+        <img src = "../assets/loginfailed.png" alt = "login failed"/>
+        <h4 style = "font-family: cursive;">Invalid Credentials</h4>
+      </div>
+ -->
+      <!-- If loginSuccess = true -->
+      <!-- <div *ngIf="loginSuccess" class="text-center">
+        <img src = "../assets/loginsuccess.png" alt="login success"/>
+        <h4 style="font-family: cursive;">Welcome {{userName}}</h4>
+      </div> -->
+
+      <!-- If loginSucess and loginFailed = true then set it to false -->
+      <!-- <div *ngIf="loginSuccess || loginFailed" class="text-center">
+        <button type = "button" class="btn btn-outline-warning" (click)="loginSuccess=loginFailed=false">Go Back</button>
+      </div> -->
+
+      <!-- *ngIf with ng-template -->
+      <ng-template #messages>
+        <div class="text-center">
+          <ng-container *ngIf="loginFailed">
+            <img src="../assets/loginfailed.png" alt="login failed" />
+            <h4 style="font-family: cursive">Invalid Credentials</h4>
+          </ng-container>
+
+          <ng-container *ngIf="loginSuccess">
+            <img src="../assets/loginsuccess.png" alt="login success" />
+            <h4 style="font-family: cursive">Welcome {{ userName }}</h4>
+          </ng-container>
+
+          <button
+            class="btn btn-outline-warning"
+            type="button"
+            (click)="loginSuccess = loginFailed = false"
+          >
+            Go Back
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<!-- *ngFor Directive -->
+<div class="container-fluid">
+  <ul>
+    <li *ngFor="let course of courses; let i = index">
+      {{ i }} - {{ course.name }}
+    </li>
+  </ul>
+</div>
+
+<!-- *ngSwitch Directive -->
+<div class="container-fluid">
+  <h4>Current Choice is {{ myChoice }}</h4>
+
+  <div [ngSwitch]="myChoice">
+    <p *ngSwitchCase="1">First Choice</p>
+    <p *ngSwitchCase="2">Second Choice</p>
+    <p *ngSwitchCase="3">Third Choice</p>
+    <p *ngSwitchCase="2">Second Choice Again</p>
+    <p *ngSwitchDefault>Default Choice</p>
+  </div>
+  <div>
+    <button (click)="nextChoice()">Next Choice</button>
+  </div>
+</div>
+<br/>
+
+<!-- ngStyle Directives -->
+<div class="container-fluid">
+  <p [ngStyle]="{
+    color:colorName,
+    'font-weight':fontWeight,
+    borderBottom: borderStyle
+}">Demo For attribute directive ngStyle</p>
+</div>
+
+<!-- ngClass Directives -->
+<div class = "container-fluid">
+  <div [ngClass] = "{bordered: isBordered, myColor: isColor}">
+    Border {{ isBordered ? "ON": "OFF"}}
+  </div>
+</div>
+
+
+<div [ngStyle]="colorFun2" class="ml-5">
+  Hello Everyone!! <span [ngClass]="'colorFun1'"> Welcome to Infosys!!</span>
+</div>

@@ -1,0 +1,61 @@
+<img [src] = 'imgUrl' width = 200 height=100 alt = "Demo Image"/> <!-- Property Binding -->
+<img src = "{{imgUrl}}" width = 200 height=100 alt = "Demo Image"/> <!-- Interpolation-->
+<!-- Attribute Binding -->
+<table class = "table table-bordered text-center">
+  <thead>
+    <tr>
+      <th [attr.rowspan]="noOfRows" class="align-middle">Name</th>
+      <th [attr.colspan]="noOfColumns">Marks</th>
+    </tr>
+    <tr>
+      <th>Test</th>
+      <th>Retest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John Doe</td>
+      <td>78</td>
+      <td class = "font-weight-bold">NA</td>
+    </tr>
+    <tr>
+      <td>Emily Carter</td>
+      <td>48</td>
+      <td>86</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Class Binding -->
+<button [class.btn-success]="applyClass" [class.btn]="applyClass">Click Me!!</button>
+<button [class]="applyClass ? 'btn btn-success mr-5' :'btn btn-primary mr-5'">Click Me!!</button>
+
+<!-- Style Binding -->
+<button [style.background-color] = "applyStyle ? 'orange':'greenyellow'" [style.color] = "applyStyle ? 'black':'white'">Click Me!!</button>
+<button [style]="applyStyle ? styleObj1 : styleObj2">Click Me!!</button>
+
+<!-- Event Binding -->
+<!-- One Way Data Binding -->
+<div class = "container-fluid text text-center">
+  <div class="row mt-5 mb-5">
+    <div class="col-md-6 offset-md-3">
+      <h3 class="text text-warning">What's your favourite course? </h3>
+      <div class="form-group">
+        <label for="course">
+          <h5>Enter Course: </h5>
+        </label>
+        <input type = "text" class = "form-control" name = "course" #course id = "course"/>
+      </div>
+      <!-- Function Call with parameters -->
+      <button class ="btn btn-outline-warning" (click) = "updateCourse(course.value)">Update Course</button>
+      <!-- Function call without parameters -->
+      <button class="btn btn-outline-danger ml-5" (click) = "reset()">Reset</button>
+      <h5 class="message text-warning">
+        Favourite Course Name: {{courseName}}
+      </h5>
+    </div>
+  </div>
+</div>
+
+<input type = "text" [(ngModel)] = "name"/> <br/>
+<div>Hello, {{ name }}</div>

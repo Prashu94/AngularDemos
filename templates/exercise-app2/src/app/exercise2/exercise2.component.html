@@ -1,0 +1,8 @@
+<div class="card">
+    <h3 class="text-center" style = "color: yellow;">When was I Born?</h3>
+    <h2 class="text-center">Enter your age: </h2>
+    <input type = "number" #age/>
+    <button style="align-items: center; width: 200px; margin-left: 650px;" class="btn btn-warning" (click)="checkAge(age.value)">Show Birth Year</button>
+    <h5 class = "text-center" style="color: yellow;">{{this.year}}</h5>
+    <h5 class = "text-center" style="color: yellow;">{{this.message}}</h5>
+</div>

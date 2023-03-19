@@ -1,0 +1,9 @@
+<div class="card">
+    <h3 class="card-text text-center" style="color: yellow;">May I help you?</h3>
+    <br/>
+    <h5 class="card-text text-center">Enter the book name: </h5>
+    <br/>
+    <input type = "text" [(ngModel)] = "bookName"/>
+    <br/>
+    <h4 class="card-text text-center" style = "color: yellow;">{{bookName && "You are searching for:" + bookName}}</h4>
+</div>
