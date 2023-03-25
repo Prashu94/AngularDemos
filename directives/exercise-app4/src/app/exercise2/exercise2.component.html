@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <h4 class="text-center" style = "font-family: cursive;">~~ Past Orders ~~</h4>
+    </div>
+
+    <div class="row">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr class="th-text">
+                    <th>Order Id</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Bill Amount</th>
+                    <th>Transaction Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders; let i = index;">
+                    <td *ngIf = "order.transaction==='completed'" class = "td-text">{{order.orderId}}</td>
+                    <td *ngIf = "order.transaction==='completed'" class = "td-text">{{order.productName}}</td>
+                    <td *ngIf = "order.transaction==='completed'" class = "td-text">{{order.quantity}}</td>
+                    <td *ngIf = "order.transaction==='completed'" class = "td-text">{{order.billAmount | currency}}</td>
+                    <td *ngIf = "order.transaction==='completed'" class = "td-text">{{order.transaction}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

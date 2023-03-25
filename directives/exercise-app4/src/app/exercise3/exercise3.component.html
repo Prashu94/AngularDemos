@@ -1,0 +1,22 @@
+<div class="container-fluid">
+
+    <div class="row" class="label-password text-center">
+        <label for="password-label" style = "font-family: cursive;"><h5>Password</h5></label>
+    </div>
+    <div class="row" class="input-password">
+        <input type = "text" style="position: relative; width: 70%; margin-left: 10%;" [(ngModel)]="password"/>
+    </div>
+    <div class="row" style = "position: relative; width: 70%; margin-left: 10%;" [ngStyle]="{'background-color':getPasswordStrengthColor()}">
+        <h5 class="text-center" *ngIf = "password" style = "font-family: cursive;" [ngStyle]="{'background-color':getPasswordStrengthColor()}">{{getPasswordStrength()}}</h5>
+    </div>
+
+    <div class="row" class="label-confirm-password text-center">
+        <label for="password-label" style = "font-family: cursive;" ><h5>Confirm Password</h5></label>
+    </div>
+    <div class="row" class="input-confirm-password">
+        <input type = "text" style="position: relative; width: 70%; margin-left: 10%;" [(ngModel)]="confirmPassword"/>
+    </div>
+    <div class="row" style="position: relative; width: 70%; margin-left: 10%;" [ngStyle]="{'background-color':checkPasswordColor()}">
+        <h5 class="text-center" *ngIf = "confirmPassword" style = "font-family: cursive;" [ngStyle]="{'background-color':checkPasswordColor()}">{{checkPassword()}}</h5>
+    </div>
+</div>

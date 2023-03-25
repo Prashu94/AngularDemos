@@ -1,0 +1,31 @@
+<div class = container-fluid>
+    <div class="row">
+
+        <div class="col-3 bg-warning">
+            <div class="row">
+                <img (mouseenter)="display1=true" (mouseleave)="display1=false" src = "../../assets/redRose.png" class="img-fluid col-12" alt = "Red Rose"/>
+            </div>
+            <div class="row">
+                <img (mouseenter)="display2=true" (mouseleave)="display2=false" src = "../../assets/jasmine.png" class="img-fluid col-12" alt = "Jasmine"/>
+            </div>
+            <div class="row">
+                <img (mouseenter)="display3=true" (mouseleave)="display3=false" src="../../assets/tulips.png" class="img-fluid col-12" alt = "Tulips"/>
+            </div>
+        </div>
+
+        <div class="col bg-success">
+            <div class="row">
+                <div *ngIf="display1===true">
+                    <img src = "../../assets/redRose.png" class="img-fluid col-12" alt = "Red Rose"/>
+                </div>
+                <div *ngIf="display2===true">
+                    <img src = "../../assets/jasmine.png" class="img-fluid col-12" alt = "Jasmine"/>
+                </div>
+                <div *ngIf="display3===true">
+                    <img src = "../../assets/tulips.png" class="img-fluid col-12" alt = "Tulips"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
