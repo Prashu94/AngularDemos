@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-app6';
+  productCode: string = "PROD_P001";
+  productName: string = "Laptop";
+  productPrice: number = 66600;
 }
