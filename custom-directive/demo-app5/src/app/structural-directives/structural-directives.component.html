@@ -1,0 +1,4 @@
+<button (click)="condition=!condition">{{ condition ? 'Display Content': 'Hide Content'}}</button>
+<p *appReverseIf="condition">
+    The content gets displayed when the condition becomes false.
+</p>

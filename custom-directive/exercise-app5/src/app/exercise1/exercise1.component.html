@@ -1,0 +1,24 @@
+<h4 class="text-center">My First Attribute Directive</h4>
+<h5 class="text-center">Pick a highlight color</h5>
+<div class="col" style="text-align: center">
+  <input
+    type="radio"
+    id="green"
+    name="green"
+    value="green"
+    [(ngModel)]="color"
+  />
+  <label for="green">Green</label>
+  <input
+    type="radio"
+    id="yellow"
+    name="yellow"
+    value="yellow"
+    [(ngModel)]="color"
+  />
+  <label for="green">Yellow</label>
+  <input type="radio" id="cyan" name="cyan" value="cyan" [(ngModel)]="color" />
+  <label for="green">Cyan</label>
+</div>
+
+<p class="text-center" appButton [buttonColor]="color">Highlight Me!!</p>
