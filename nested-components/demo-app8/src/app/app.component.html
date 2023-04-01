@@ -1,0 +1,26 @@
+<div class = "container-fluid">
+  <div class="row">
+    <h2 class="text-center">Popular Courses</h2>
+    <button (click)="show=!show" class="btn btn-primary" style="align-items: center;">{{!show ? 'View Courses List': 'Hide Courses List'}}</button>
+  </div>
+  <div class="row" *ngIf = "show">
+    <app-demo1></app-demo1>
+  </div>
+  <div class="row" style="margin-top: 20%;">
+    <div class="col">
+        <div style="display: inline-block; width: 50%;margin-right: -10%;">
+            <p class="text-center"><b>Select a course to view: </b></p>
+        </div>
+        <div class="dropdown" style="display: inline-block; position: absolute; margin-right: 20%;">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                {{selectedOption ? selectedOption: 'Please select a Course'}}
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#" *ngFor="let course of courses;" (click) ="onSelect(course.courseName)">{{course.courseName}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<app-demo2 [cName]="selectedOption"></app-demo2>
+</div>

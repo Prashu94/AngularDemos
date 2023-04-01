@@ -42,6 +42,34 @@
                 <th>Currency 8</th>
                 <td>{{ productPrice | currency: 'INR': 'code': '1.3'}}</td>
             </tr>
+            <tr>
+                <th>Percent 1</th>
+                <td>{{productDiscount | percent}}</td>
+            </tr>
+            <tr>
+                <th>Percent 2</th>
+                <td>{{productDiscount | percent: '2.2-3'}}</td>
+            </tr>
+            <tr>
+                <th>Number 1</th>
+                <td>{{25000 | number}}</td>
+            </tr>
+            <tr>
+                <th>Number 2</th>
+                <td>{{25000 | number:'.3-5'}}</td>
+            </tr>
+            <tr>
+                <th>Date 1</th>
+                <td>{{productDate | date}}</td>
+            </tr>
+            <tr>
+                <th>Date 2</th>
+                <td>{{productDateTime | date: 'medium'}}</td>
+            </tr>
+            <tr>
+                <th>Date 3</th>
+                <td>{{productDateTime | date: 'mmss'}}</td>
+            </tr>
         </table>
     </div>
 </div>

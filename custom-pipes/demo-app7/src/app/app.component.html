@@ -1,0 +1,43 @@
+<div class="container=fluid">
+  <div class="row">
+    <h5 class="text-center">Sorting Products list using customer pipe</h5>
+  </div>
+  <div class="row">
+  
+    <div class="col">
+      <div style="display: inline-block; width: 50%; margin-left: 30%;">
+        <h5 style="display: inline-block;">Sort the list based on: </h5>
+      </div>
+      <div class="dropdown" style="display: inline-block; position: absolute; left: 50%;">
+        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          {{selectedOption ?  selectedOption : 'Please Select Option to Sort'}}
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#" *ngFor="let option of options;" (click)="onSelect(option)">{{option}}</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class = "row" style="width:50%; margin-left: 25%;">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productsList | sort: selectedOption;">
+          <td>{{product.productName}}</td>
+          <td>{{product.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+    
+  
+</div>

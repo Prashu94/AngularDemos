@@ -1,0 +1,16 @@
+<div class="row" style="width: 50%; margin-left: 20%;">
+    <table class="table table-bordered" *ngIf="cName">
+        <thead>
+            <tr>
+                <th>Course Id</th>
+                <th>Course Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses;">
+                <td *ngIf="course.courseName === cName">{{course.courseId}}</td>
+                <td *ngIf="course.courseName === cName">{{course.courseName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
