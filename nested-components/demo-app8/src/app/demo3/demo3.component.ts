@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-demo3',
@@ -13,10 +13,15 @@ export class Demo3Component implements OnInit {
     {courseId: 4, courseName: "ReactJS"}
   ];
 
+  @Output()
+  onRegister = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  register(courseName: string){
+    this.onRegister.emit(courseName);
+  }
 }

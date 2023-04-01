@@ -14,7 +14,11 @@ export class AppComponent {
     {courseId: 4, courseName: "React JS"}
   ];
   selectedOption!:string;
+  message:string = "";
   onSelect(option: string){
     this.selectedOption = option;
+  }
+  courseRegister(courseName: string){
+    this.message = `Your registration for ${courseName} is successful.`;
   }
 }
