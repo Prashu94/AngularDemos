@@ -12,6 +12,14 @@ import { OnChangesComponent } from './on-changes.component';
 import { OnChangesParentComponent } from './on-changes-parent-component';
 import { DoCheckComponent } from './do.check.component';
 import { DoCheckParentComponent } from './do-check-parent.component';
+import { ChildViewComponent } from './child-view.component';
+import { ChildComponent } from './child.component';
+import { AfterViewComponent } from './after-view.component';
+import { AfterViewParentComponent } from './after-view-parent.component';
+import { AfterContentComponent } from './after-content.component';
+import { AfterContentParentComponent } from './after-content-parent.component';
+import { MyCounterComponent } from './counter.component';
+import { CounterParentComponent } from './counter-parent.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +32,15 @@ import { DoCheckParentComponent } from './do-check-parent.component';
     OnChangesComponent,
     OnChangesParentComponent,
     DoCheckComponent,
-    DoCheckParentComponent
+    DoCheckParentComponent,
+    ChildViewComponent,
+    ChildComponent,
+    AfterViewComponent,
+    AfterViewParentComponent,
+    AfterContentComponent,
+    AfterContentParentComponent,
+    MyCounterComponent,
+    CounterParentComponent
   ],
   imports: [
     BrowserModule,
