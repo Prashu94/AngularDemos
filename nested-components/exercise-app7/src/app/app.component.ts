@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  totalCost!:number;
-
-  
+  message!:string;
+  discountMessage!:string;
+  totalPrices(totalPrice: number){
+    this.message = `The total Price is ${totalPrice}`
+    this.discountMessage = totalPrice > 100000 ? `You are eligible for discount`: ``;
+  }
 }

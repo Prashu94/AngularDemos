@@ -9,15 +9,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products;">
+        <tr *ngFor="let product of products;let i=index;">
             <td>
-                <button class="btn btn-primary">Delete</button>
+                <button class="btn btn-primary" (click)="deleteRow(i)">Delete</button>
             </td>
             <td>{{product.productId}}</td>
             <td>{{product.productName}}</td>
             <td>{{product.productPrice}}</td>
             <td>
-                <input type="number" [value]="product.productQuantity"/>
+                <input type="number" [value]="product.productQuantity" [(ngModel)]="product.productQuantity" (ngModelChange)="calculateTotalPrice()"/>
+                <span class="errorMessage">{{ product.validationMessage }}</span>
             </td>
         </tr>
     </tbody>

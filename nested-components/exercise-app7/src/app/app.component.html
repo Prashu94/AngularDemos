@@ -1,9 +1,16 @@
 <div class="container-fluid">
-    <div class="row">
+    <!-- <div class="row">
         <app-exercise1></app-exercise1>
     </div>
     <div class="row">
-        <app-exercise2></app-exercise2>
-        <p>The total price is </p>
+        <app-exercise2 (totalPrice)="totalPrices($event)"></app-exercise2>
+        <p class="text-center" *ngIf="message">{{ message }}</p>
+        <p class="text-center successMessage" *ngIf="discountMessage">{{discountMessage}}</p>
+    </div> -->
+    <!-- <div class="row">
+        <app-exercise3></app-exercise3>
+    </div> -->
+    <div class="row">
+        <app-exercise4></app-exercise4>
     </div>
 </div>
