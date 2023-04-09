@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": false
+    "analytics": "60e9a526-477a-4897-8588-929efb4cb55b"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo-app9": {
+    "demo-app10": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo-app9",
+            "outputPath": "dist/demo-app10",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "demo-app9:build:production"
+              "browserTarget": "demo-app10:build:production"
             },
             "development": {
-              "browserTarget": "demo-app9:build:development"
+              "browserTarget": "demo-app10:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-app9:build"
+            "browserTarget": "demo-app10:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "demo-app9"
+  "defaultProject": "demo-app10"
 }
