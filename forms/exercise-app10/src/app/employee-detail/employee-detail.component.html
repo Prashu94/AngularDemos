@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-dark">
+                    <th>Employee Id</th>
+                    <th>Employee Name</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees; let i=index;">
+                    <td>{{employee.empId}}</td>
+                    <td>{{employee.empName}}</td>
+                    <td>{{employee.age}}</td>
+                    <td><button class="btn btn-primary" (click)="onSelect(employee)">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" *ngIf="idSelected">
+        <p class="text-info">{{message}}</p>
+        <app-edit-employee [employeeToEdit]="employeeSelected"></app-edit-employee>
+    </div>
+</div>
