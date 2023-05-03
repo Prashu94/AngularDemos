@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule}  from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Demo1Component } from './demo1/demo1.component';
-import { BookService } from './demo1/book.service';
-import { HttpClientModule }  from '@angular/common/http';
+import { BookComponent } from './book/book.component';
 import { FormsModule } from '@angular/forms';
+import { BookService } from './book/book.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Demo1Component
+    BookComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [BookService],

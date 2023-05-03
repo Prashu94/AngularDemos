@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "post-web-ui": {
+    "demo-app12": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/post-web-ui",
+            "outputPath": "dist/demo-app12",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "post-web-ui:build:production"
+              "browserTarget": "demo-app12:build:production"
             },
             "development": {
-              "browserTarget": "post-web-ui:build:development"
+              "browserTarget": "demo-app12:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "post-web-ui:build"
+            "browserTarget": "demo-app12:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "post-web-ui"
+  "defaultProject": "demo-app12"
 }
