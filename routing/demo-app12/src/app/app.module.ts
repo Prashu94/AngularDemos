@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { FormsModule } from '@angular/forms';
 import { BookService } from './book/book.service';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent
+    BookComponent,
+    BookDetailsComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

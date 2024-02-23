@@ -1,12 +1,12 @@
 [
-    {"id":1, "name": "HTML5"},
-    {"id":2, "name": "CSS3"},
-    {"id":3, "name": "Java Script"},
-    {"id":4, "name": "VB.Net"},
-    {"id":5, "name": "Azure"},
-    {"id":6, "name": "C#"},
-    {"id":7, "name": "Python"},
-    {"id":8, "name": "Angular JS"},
-    {"id":9, "name": "Type Script"},
-    {"id":10, "name": "MongoDB"}
+    {"id":1, "name": "HTML5", "stream": "Web"},
+    {"id":2, "name": "CSS3", "stream": "Web"},
+    {"id":3, "name": "Java Script", "stream": "Java"},
+    {"id":4, "name": "VB.Net", "stream": ".NET"},
+    {"id":5, "name": "Azure", "stream": "Cloud"},
+    {"id":6, "name": "C#", "stream": "C"},
+    {"id":7, "name": "Python", "stream": "Scripting"},
+    {"id":8, "name": "Angular JS", "stream": "Scripting"},
+    {"id":9, "name": "Type Script", "stream": "Scripting"},
+    {"id":10, "name": "MongoDB", "stream": "Scripting"}
 ]
